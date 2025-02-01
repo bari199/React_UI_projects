@@ -1,0 +1,293 @@
+/** Import Google Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --green: #006039;
+  --gray: #2e2e2e;
+  --golden: #A37E2C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* General Button Styles */
+button {
+  all: unset;
+  padding: 10px 18px;
+  background: var(--green);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: var(--golden);
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 16px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 10px 20px;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-size: 16px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--gray); /* Use your theme color */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: var(--golden);
+}
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 50vh;
+  padding: 120px 20px 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+  
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 70px;
+  
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero h1 .span-2 {
+  color: var(--golden);
+}
+
+.hero p {
+  font-weight: 600;
+  color: var(--gray);
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-btn button {
+  font-size: 18px;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid gray;
+}
+
+.shopping p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile Hero Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  /* Image will be placed above the heading */
+  .hero-image {
+    order: -1;
+  }
+  .hero-image img {
+   
+    max-width: 950px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 3px 0;
+    margin: 15px;
+    text-align: center;
+  }
+
+  
+  /* Show menu when active */
+  nav ul.active {
+    display: flex;
+    margin-bottom: 20px;
+    
+  }
+
+  /* Hide Login button by default in mobile */
+  nav button {
+    display: none;
+  }
+
+  /* Show Login button only when menu is open */
+  nav ul.active + button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+   /* Fix overlap issue by pushing down hero section when menu is open */
+   .hero {
+    transition: margin-top 0.3s ease-in-out;
+  }
+
+  .menu-open .hero {
+    margin-top: 180px; /* Adjust space based on menu height */
+  }
+}
+
