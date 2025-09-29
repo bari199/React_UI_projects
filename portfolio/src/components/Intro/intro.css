@@ -59,3 +59,16 @@
 
 
 }
+
+@media screen and (max-width: 840px){
+    .bg{
+        right: -10vw;
+    }
+    .introContent{
+        font-size: 10vw;
+
+    }
+    .hello{
+        font-size: 4.5vw;
+    }
+}
