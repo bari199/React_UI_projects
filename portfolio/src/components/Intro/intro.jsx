@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from '../../assets/hero1.png';
+import bg from '../../assets/hero2.png';
 import cart from '../../assets/cart.png';
 import './intro.css';
 
