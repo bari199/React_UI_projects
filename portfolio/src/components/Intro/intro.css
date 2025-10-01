@@ -44,6 +44,7 @@
 
 .btn {
     background: linear-gradient(135deg, #255dc5, #5f8fe2);
+    color: #fff;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
